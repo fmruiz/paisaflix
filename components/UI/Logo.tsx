@@ -9,5 +9,5 @@ const LogoText = styled.h1`
 `;
 
 export const Logo: React.FC = () => {
-  return <LogoText>Paisaflix</LogoText>;
+  return <LogoText data-cy="principal-title">Paisaflix</LogoText>;
 };
