@@ -4,7 +4,7 @@ export const FooterContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 112px;
 `;
 
 export const Column = styled.div`
@@ -66,6 +66,7 @@ export const FooterMenu = styled.div`
   justify-content: space-between;
   margin-bottom: 60px;
   width: 85%;
+  padding-top: 40px;
 `;
 
 export const FooterMenuLinks = styled.div`

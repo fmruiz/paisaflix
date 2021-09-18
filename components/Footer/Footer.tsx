@@ -57,7 +57,7 @@ const SITEMAP_LINKS = [
 export const Footer: React.FC = () => (
   <FooterContainer>
     <Column>
-      <Logo />
+      <Logo size_xl={true}/>
       <NewsLettersContainer>
         <NewsLettersText>Join Newsletters</NewsLettersText>
         <FooterInputContainer>
