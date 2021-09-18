@@ -1,4 +1,5 @@
 import React from "react";
+import { timeFormat } from "../../utils/timeFormat";
 
 import {
   MovieContainer,
@@ -34,7 +35,7 @@ export const MovieDescription: React.FC<IProps> = ({
     </MovieDescriptionText>
     <MovieDetailsContainer>
       <MovieDetails>Genre : {genre}</MovieDetails>
-      <MovieDetails>Duration : {duration}</MovieDetails>
+      <MovieDetails>Duration : {timeFormat(duration)}</MovieDetails>
       <MovieDetails>Ratings : {rating}</MovieDetails>
     </MovieDetailsContainer>
     <WatchNowBtn />
