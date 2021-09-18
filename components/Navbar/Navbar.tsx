@@ -23,7 +23,7 @@ const LINKS_NAV = [
 export const Navbar: React.FC = () => {
   return (
     <NavbarContainer data-cy="navbar">
-      <Column>
+      <Column data-cy="navbar-first-column">
         <Logo />
         <LinksContainer data-cy="navbar-container-links">
           {LINKS_NAV.map((link, i) => (
@@ -31,7 +31,7 @@ export const Navbar: React.FC = () => {
           ))}
         </LinksContainer>
       </Column>
-      <Column>
+      <Column data-cy="navbar-second-column">
         <SearchIcon />
         <UserContainer>
           <Image src="/images/user.png" alt="user" width="48" height="48" />

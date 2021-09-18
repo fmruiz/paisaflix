@@ -8,17 +8,18 @@ describe("Navbar", () => {
   });
 
   it("Title contains Paisaflix", () => {
-    cy.get("[data-cy=principal-title]").contains("Paisaflix");
+    cy.get("[data-cy=navbar] > [data-cy=navbar-first-column] > [data-cy=principal-title]")
+      .contains("Paisaflix");
   });
 
   it("Should be able to visualize four links in navbar", () => {
     cy.get("[data-cy=navbar-container-links] > [data-cy=navbar-home]")
-        .contains("Home");
+      .contains("Home");
     cy.get("[data-cy=navbar-container-links] > [data-cy=navbar-contact]")
-        .contains("Contact Us");
+      .contains("Contact Us");
     cy.get("[data-cy=navbar-container-links] > [data-cy=navbar-faq]")
-        .contains("FAQ");
+      .contains("FAQ");
     cy.get("[data-cy=navbar-container-links] > [data-cy=navbar-pricing]")
-        .contains("Pricing");
+      .contains("Pricing");
   });
 });

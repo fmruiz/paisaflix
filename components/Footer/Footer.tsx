@@ -55,39 +55,39 @@ const SITEMAP_LINKS = [
 ];
 
 export const Footer: React.FC = () => (
-  <FooterContainer>
-    <Column>
-      <Logo size_xl={true}/>
+  <FooterContainer data-cy="footer">
+    <Column data-cy="footer-first-column">
+      <Logo size_xl={true} data-cy="footer-title"/>
       <NewsLettersContainer>
         <NewsLettersText>Join Newsletters</NewsLettersText>
         <FooterInputContainer>
-          <FooterInput placeholder="Insert your mail here" />
+          <FooterInput placeholder="Insert your mail here" data-cy="footer-input"/>
           <FooterInputBtn>
             <ArrowIcon />
           </FooterInputBtn>
         </FooterInputContainer>
       </NewsLettersContainer>
     </Column>
-    <Column>
+    <Column data-cy="footer-second-column">
       <FooterMenu>
         {PRODUCT_LINKS.map((p, i) => (
-          <FooterMenuLinks key={i}>
+          <FooterMenuLinks key={i} data-cy="footer-product-list">
             <FooterTitle>{p.title}</FooterTitle>
-            <FooterLinks>{p.link_one}</FooterLinks>
-            <FooterLinks>{p.link_two}</FooterLinks>
-            <FooterLinks>{p.link_three}</FooterLinks>
+            <FooterLinks href={"/"}>{p.link_one}</FooterLinks>
+            <FooterLinks href={"/"}>{p.link_two}</FooterLinks>
+            <FooterLinks href={"/"}>{p.link_three}</FooterLinks>
           </FooterMenuLinks>
         ))}
         {MEDIA_LINKS.map((p, i) => (
-          <FooterMenuLinks key={i}>
+          <FooterMenuLinks key={i} data-cy="footer-media-list">
             <FooterTitle>{p.title}</FooterTitle>
-            <FooterLinks>{p.link_one}</FooterLinks>
-            <FooterLinks>{p.link_two}</FooterLinks>
-            <FooterLinks>{p.link_three}</FooterLinks>
+            <FooterLinks href={"/"}>{p.link_one}</FooterLinks>
+            <FooterLinks href={"/"}>{p.link_two}</FooterLinks>
+            <FooterLinks href={"/"}>{p.link_three}</FooterLinks>
           </FooterMenuLinks>
         ))}
         {SITEMAP_LINKS.map((p, i) => (
-          <FooterMenuLinks key={i}>
+          <FooterMenuLinks key={i} data-cy="footer-sitemap-list">
             <FooterTitle>{p.title}</FooterTitle>
             <FooterLinks>{p.link_one}</FooterLinks>
             <FooterLinks>{p.link_two}</FooterLinks>

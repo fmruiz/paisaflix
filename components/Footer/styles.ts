@@ -81,7 +81,7 @@ export const FooterTitle = styled.span`
   margin-bottom: 20px;
 `;
 
-export const FooterLinks = styled.span`
+export const FooterLinks = styled.a`
   color: ${(p) => p.theme.color.gray_semi_light};
   font-size: ${(p) => p.theme.font_size.sm};
   margin-top: 21px;

@@ -16,7 +16,7 @@ const LogoTextLarge = styled.h1`
 `;
 
 interface IProps {
-  size_xl: boolean;
+  size_xl?: boolean;
 }
 
 export const Logo: React.FC<IProps> = ({ size_xl }: IProps) => {
