@@ -8,6 +8,7 @@ import { theme } from "styles/theme";
 import { Navbar } from "@/components/Navbar/Navbar";
 import { PrincipalContainer } from "@/components/UI/PrincipalContainer";
 import { Footer } from "@/components/Footer/Footer";
+import { Banner } from "@/components/Banner/Banner";
 
 const Home: NextPage = () => {
   return (
@@ -21,7 +22,7 @@ const Home: NextPage = () => {
               content="initial-scale=1.0, width=device-width"
             />
           </Head>
-          <Navbar />
+          <Banner />
           <Footer />
         </Fragment>
       </PrincipalContainer>
