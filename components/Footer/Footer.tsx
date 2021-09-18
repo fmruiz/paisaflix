@@ -89,9 +89,9 @@ export const Footer: React.FC = () => (
         {SITEMAP_LINKS.map((p, i) => (
           <FooterMenuLinks key={i} data-cy="footer-sitemap-list">
             <FooterTitle>{p.title}</FooterTitle>
-            <FooterLinks>{p.link_one}</FooterLinks>
-            <FooterLinks>{p.link_two}</FooterLinks>
-            <FooterLinks>{p.link_three}</FooterLinks>
+            <FooterLinks href={"/"}>{p.link_one}</FooterLinks>
+            <FooterLinks href={"/"}>{p.link_two}</FooterLinks>
+            <FooterLinks href={"/"}>{p.link_three}</FooterLinks>
           </FooterMenuLinks>
         ))}
       </FooterMenu>

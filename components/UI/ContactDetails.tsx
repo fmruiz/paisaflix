@@ -4,9 +4,22 @@ import styled from "styled-components";
 const ContactDetailsContainer = styled.div`
   display: flex;
   align-items: center;
+  cursor: pointer;
   :nth-child(2) {
     margin-left: 24px;
     margin-right: 24px;
+  }
+
+  svg path {
+    fill: ${(p) => p.theme.color.white};
+    transition: all 0.5s;
+  }
+
+  :hover {
+    svg path {
+      fill: ${(p) => p.theme.color.yellow};
+      transition: all 0.5s;
+    }
   }
 `;
 

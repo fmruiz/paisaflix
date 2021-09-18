@@ -43,6 +43,13 @@ export const FooterInputBtn = styled.button`
   color: black;
   border-radius: 8px;
   border: none;
+  cursor: pointer;
+  transition: all .5s;
+
+  :hover {
+    background-color: ${p => p.theme.color.yellow_strong};
+    transition: all .5s;
+  }
 `;
 
 export const FooterInput = styled.input`
@@ -86,4 +93,10 @@ export const FooterLinks = styled.a`
   font-size: ${(p) => p.theme.font_size.sm};
   margin-top: 21px;
   margin-bottom: 21px;
+  transition: all .2s;
+
+  :hover {
+    color: ${(p) => p.theme.color.white};
+    transition: all .2s;
+  }
 `;

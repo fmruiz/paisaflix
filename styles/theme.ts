@@ -8,6 +8,7 @@ export const theme = {
     gray_semi_strong: "#AAAAB6",
     gray_strong: "#464646",
     yellow: "#FED530",
+    yellow_strong: "#998639",
     white: "#FFFFFF",
   },
   font_size: {
