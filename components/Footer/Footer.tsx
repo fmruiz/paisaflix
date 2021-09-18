@@ -1,5 +1,6 @@
 import React from "react";
 import { ContactDetails } from "../UI/ContactDetails";
+import { ArrowIcon } from "../UI/Icons/ArrowIcon";
 import { LocationIcon } from "../UI/Icons/LocationIcon";
 import { MessageIcon } from "../UI/Icons/MessageIcon";
 import { PhoneIcon } from "../UI/Icons/PhoneIcon";
@@ -9,6 +10,8 @@ import {
   Column,
   ContactContainer,
   FooterContainer,
+  FooterInput,
+  FooterInputBtn,
   FooterInputContainer,
   FooterLinks,
   FooterMenu,
@@ -57,7 +60,12 @@ export const Footer: React.FC = () => (
       <Logo />
       <NewsLettersContainer>
         <NewsLettersText>Join Newsletters</NewsLettersText>
-        <FooterInputContainer></FooterInputContainer>
+        <FooterInputContainer>
+          <FooterInput placeholder="Insert your mail here" />
+          <FooterInputBtn>
+            <ArrowIcon />
+          </FooterInputBtn>
+        </FooterInputContainer>
       </NewsLettersContainer>
     </Column>
     <Column>

@@ -9,6 +9,8 @@ const MediaContainer = styled.div`
   margin: 0 auto;
   @media (min-width: 1440px) {
     max-width: ${(p) => p.theme.max_width.desktop};
+    padding-left: 100px;
+    padding-right: 100px;
   }
 `;
 

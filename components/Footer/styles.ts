@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const FooterContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-bottom: 100px;
 `;
 
 export const Column = styled.div`
@@ -22,11 +23,30 @@ export const NewsLettersText = styled.span`
 `;
 
 export const FooterInputContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   border: 1px solid ${(p) => p.theme.color.gray_strong};
   border-radius: 8px;
   height: 64px;
   margin-top: 30px;
   width: 282px;
+  padding: 7px 8px;
+`;
+
+export const FooterInputBtn = styled.button`
+  width: 48px;
+  height: 48px;
+  background-color: ${p => p.theme.color.yellow};
+  color: black;
+  border-radius: 8px;
+  border: none;
+`;
+
+export const FooterInput = styled.input`
+  background-color: ${p => p.theme.color.black_strong};
+  font-size: ${p => p.theme.font_size.sm};
+  border: none;
 `;
 
 export const ContactContainer = styled.div`
