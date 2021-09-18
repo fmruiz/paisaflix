@@ -6,6 +6,7 @@ const LogoTextMedium = styled.h1`
   font-size: ${(p) => p.theme.font_size.md};
   font-weight: 700;
   margin: 0px 60px 0px 0px;
+  cursor: pointer;
 `;
 
 const LogoTextLarge = styled.h1`
@@ -13,6 +14,7 @@ const LogoTextLarge = styled.h1`
   font-size: ${(p) => p.theme.font_size.xl};
   font-weight: 700;
   margin: 0px 60px 0px 0px;
+  cursor: pointer;
 `;
 
 interface IProps {

@@ -15,6 +15,7 @@ export const Column = styled.div`
 export const LinksContainer = styled.div`
   align-items: center;
   display: flex;
+  height: 40px;
 `;
 
 export const LinksName = styled.span`
@@ -22,6 +23,15 @@ export const LinksName = styled.span`
   font-size: ${(p) => p.theme.font_size.sm};
   margin-right: 24px;
   margin-left: 24px;
+  transition: all .2s;
+
+  :hover {
+    color: ${p => p.theme.color.white};
+    border-bottom: 4px solid ${p => p.theme.color.yellow};
+    padding-bottom: 8px;
+    cursor: pointer;
+    transition: all .2s;
+  }
 `;
 
 export const UserContainer = styled.div`
