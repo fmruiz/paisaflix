@@ -4,6 +4,7 @@ export const NavbarContainer = styled.div`
   align-items: center;
   display: flex;
   justify-content: space-between;
+  padding-top: 30px;
 `;
 
 export const Column = styled.div`

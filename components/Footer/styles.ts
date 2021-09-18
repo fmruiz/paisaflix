@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const FooterContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-top: 100px;
   margin-bottom: 100px;
 `;
 
@@ -14,6 +15,7 @@ export const Column = styled.div`
 export const NewsLettersContainer = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: 50px;
 `;
 
 export const NewsLettersText = styled.span`
@@ -45,8 +47,12 @@ export const FooterInputBtn = styled.button`
 
 export const FooterInput = styled.input`
   background-color: ${p => p.theme.color.black_strong};
+  color: ${p => p.theme.color.gray_semi_strong};
   font-size: ${p => p.theme.font_size.sm};
   border: none;
+  :focus-visible {
+    outline: none;
+  }
 `;
 
 export const ContactContainer = styled.div`
