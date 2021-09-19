@@ -9,7 +9,6 @@ import { MovieDescription } from "@/components/MovieDescription/MovieDescription
 import { Trailers } from "@/components/Trailers/Trailers";
 
 const Movie: NextPage<any> = ({ data }) => {
-    console.log(data);
   return (
     <Fragment>
       <BannerContainer>
