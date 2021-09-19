@@ -8,6 +8,7 @@ import { Navbar } from "../Navbar/Navbar";
 import { MovieDescription } from "../MovieDescription/MovieDescription";
 import { Footer } from "../Footer/Footer";
 import { Trailers } from "../Trailers/Trailers";
+import { MoviesGroup } from "../MoviesGroup/MoviesGroup";
 
 const queryClient = new QueryClient();
 
@@ -52,6 +53,7 @@ const Component = () => {
         rating={data.data.rating}
       />
       <Trailers />
+      <MoviesGroup />
       <Footer />
     </BannerContainer>
   );
