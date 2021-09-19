@@ -27,4 +27,21 @@ export const MoviesSubtitle = styled.span`
   font-size: ${(p) => p.theme.font_size.sm_2};
   margin: 0;
   font-weight: 700;
+  cursor: pointer;
+  transition: all .3s;
+
+  :hover {
+    color: ${(p) => p.theme.color.yellow_strong};
+    transition: all .3s;
+  }
+`;
+
+export const MoviesSelectedContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+
+export const MoviesSelectedRow = styled.div`
+    display: flex;
+    align-items: center;
 `;
