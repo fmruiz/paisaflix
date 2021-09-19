@@ -12,7 +12,8 @@ export const MovieTitleText = styled.h3`
   color: ${(p) => p.theme.color.white};
   font-size: ${(p) => p.theme.font_size.xl_2};
   font-weight: 700;
-  margin-bottom: 32px;
+  margin-bottom: 30px;
+  margin-top: 127px;
 `;
 
 export const MovieDescriptionText = styled.p`
@@ -27,7 +28,7 @@ export const MovieDetailsContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 `;
 
 export const MovieDetails = styled.div`

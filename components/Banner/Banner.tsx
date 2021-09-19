@@ -50,7 +50,6 @@ const Component = () => {
         genre={data.data.genre}
         duration={data.data.duration}
         rating={data.data.rating}
-        views={data.data.views}
       />
       <Trailers />
       <Footer />

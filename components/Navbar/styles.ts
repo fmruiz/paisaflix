@@ -4,7 +4,7 @@ export const NavbarContainer = styled.div`
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding-top: 30px;
+  padding-top: 27px;
   z-index: 2;
   background: transparent;
   padding-left: 104px;
@@ -48,5 +48,5 @@ export const UserName = styled.span`
   color: ${(p) => p.theme.color.gray_semi_light};
   font-size: ${(p) => p.theme.font_size.sm};
   font-weight: 700;
-  margin-left: 15px;
+  margin-left: 16px;
 `;

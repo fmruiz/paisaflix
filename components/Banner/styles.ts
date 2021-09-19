@@ -15,7 +15,7 @@ export const CoverContainer = styled.div`
   margin: 0 auto;
   width: 100%;
   .cover__container {
-    width: 50%;
+    width: 854px;
     position: relative;
   }
   .filter {

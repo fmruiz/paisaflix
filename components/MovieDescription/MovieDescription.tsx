@@ -10,13 +10,13 @@ import {
 } from "./styles";
 
 import { WatchNowBtn } from "../UI/WatchNowBtn";
+import { Rating } from "../Rating/Rating";
 
 interface IProps {
   name?: string;
   genre?: string;
   duration?: number;
-  rating?: number;
-  views?: number;
+  rating: number;
 }
 
 export const MovieDescription: React.FC<IProps> = ({
@@ -24,10 +24,10 @@ export const MovieDescription: React.FC<IProps> = ({
   genre,
   duration,
   rating,
-  views,
 }: IProps) => (
   <MovieContainer>
     <MovieTitleText>{name}</MovieTitleText>
+    <Rating ratingNumber={rating} />
     <MovieDescriptionText>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
