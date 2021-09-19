@@ -13,7 +13,7 @@ export const TrailersTitle = styled.p`
   font-size: ${(p) => p.theme.font_size.md};
   font-weight: 700;
   margin: 0;
-  padding-top: 26.5px;
+  padding-top: 68px;
   padding-bottom: 32px;
 `;
 

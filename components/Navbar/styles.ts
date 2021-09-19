@@ -49,4 +49,5 @@ export const UserName = styled.span`
   font-size: ${(p) => p.theme.font_size.sm};
   font-weight: 700;
   margin-left: 16px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
 `;
