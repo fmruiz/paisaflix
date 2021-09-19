@@ -1,13 +1,11 @@
 import { Fragment } from "react";
+import { ThemeProvider } from "styled-components";
 import type { NextPage } from "next";
 import Head from "next/head";
 
-import { ThemeProvider } from "styled-components";
 import { theme } from "styles/theme";
 
-import { Navbar } from "@/components/Navbar/Navbar";
 import { PrincipalContainer } from "@/components/UI/PrincipalContainer";
-import { Footer } from "@/components/Footer/Footer";
 import { Banner } from "@/components/Banner/Banner";
 
 const Home: NextPage = () => {
@@ -23,7 +21,6 @@ const Home: NextPage = () => {
             />
           </Head>
           <Banner />
-          <Footer />
         </Fragment>
       </PrincipalContainer>
     </ThemeProvider>

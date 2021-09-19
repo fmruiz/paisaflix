@@ -5,6 +5,9 @@ export const FooterContainer = styled.div`
   justify-content: space-between;
   margin-top: 100px;
   margin-bottom: 112px;
+  z-index: 2;
+  padding-left: 104px;
+  padding-right: 104px;
 `;
 
 export const Column = styled.div`

@@ -3,6 +3,9 @@ import styled from "styled-components";
 export const MovieContainer = styled.div`
   display: flex;
   flex-direction: column;
+  z-index: 2;
+  padding-left: 104px;
+  padding-right: 104px;
 `;
 
 export const MovieTitleText = styled.h3`

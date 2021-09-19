@@ -11,6 +11,7 @@ const WatchNowContainer = styled.button`
   height: 76.44px;
   width: 348px;
   transition: all .3s;
+  cursor: pointer;
 
   :hover {
     background-color: ${p => p.theme.color.yellow_strong};

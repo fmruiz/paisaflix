@@ -1,16 +1,16 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { useQuery, QueryClient, QueryClientProvider } from "react-query";
 
-import { BannerContainer } from "./styles";
+import { BannerContainer, CoverContainer } from "./styles";
 
 import { Navbar } from "../Navbar/Navbar";
 import { MovieDescription } from "../MovieDescription/MovieDescription";
-
-interface Props {}
+import { Footer } from "../Footer/Footer";
 
 const queryClient = new QueryClient();
 
-const Example = () => {
+const Component = () => {
   const { isError, isLoading, data } = useQuery("Hero", () =>
     fetch("https://paisa-challange.herokuapp.com/api/v1/paisaflix/hero").then(
       (res) => res.json()
@@ -32,8 +32,18 @@ const Example = () => {
     );
 
   return (
-    <div>
+    <BannerContainer>
       <Navbar />
+      <CoverContainer>
+        <div className={"cover__container"}>
+          <div className={"filter"}></div>
+          <img
+            className={"cover__image"}
+            src={data.data.coverImage}
+            alt={`${data.data.name} image`}
+          />
+        </div>
+      </CoverContainer>
       <MovieDescription
         name={data.data.name}
         genre={data.data.genre}
@@ -41,16 +51,15 @@ const Example = () => {
         rating={data.data.rating}
         views={data.data.views}
       />
-    </div>
+      <Footer />
+    </BannerContainer>
   );
 };
 
-export const Banner: React.FC = (props: Props) => {
+export const Banner: React.FC = () => {
   return (
     <QueryClientProvider client={queryClient}>
-      <BannerContainer>
-        <Example />
-      </BannerContainer>
+      <Component />
     </QueryClientProvider>
   );
 };

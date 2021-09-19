@@ -5,6 +5,10 @@ export const NavbarContainer = styled.div`
   display: flex;
   justify-content: space-between;
   padding-top: 30px;
+  z-index: 2;
+  background: transparent;
+  padding-left: 104px;
+  padding-right: 104px;
 `;
 
 export const Column = styled.div`
