@@ -56,7 +56,6 @@ const Component = () => {
                   duration={d.duration}
                 />
               ))}
-          {/* <MovieContainer /> */}
         </MoviesSelectedRow>
         <MoviesSelectedRow>
         {!isError &&

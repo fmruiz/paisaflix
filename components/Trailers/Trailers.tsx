@@ -45,6 +45,7 @@ const Component = () => {
                 src={t.trailerImage}
                 alt={`trailer_${i}`}
               />
+              <div className={"trailer__filter"}></div>
               <p className={"img__index"}>{numTrailers(i + 1)}</p>
             </TrailerMovie>
           ))}

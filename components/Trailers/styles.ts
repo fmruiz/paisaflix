@@ -25,6 +25,14 @@ export const TrailerMovieContainer = styled.div`
 export const TrailerMovie = styled.div`
   height: 160px;
   position: relative;
+  .trailer__filter {
+    background: linear-gradient(180deg, rgba(23, 23, 23, 0) 0%, #171717 100%);
+    opacity: 0.8;
+    position: absolute;
+    width: 297px;
+    height: 136px;
+    top: 0;
+  }
   .img__trailer {
     margin-right: 15px;
   }
