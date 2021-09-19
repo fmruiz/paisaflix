@@ -10,6 +10,12 @@ const WatchNowContainer = styled.button`
   font-weight: 700;
   height: 76.44px;
   width: 348px;
+  transition: all .3s;
+
+  :hover {
+    background-color: ${p => p.theme.color.yellow_strong};
+    transition: all .3s;
+  }
 `;
 
 export const WatchNowBtn: React.FC = () => (
