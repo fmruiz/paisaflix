@@ -4,6 +4,7 @@ export const Container = styled.div`
   margin-bottom: 16px;
   margin-right: 16px;
   position: relative;
+  cursor: pointer;
 `;
 
 export const MovieContainerDetails = styled.div`

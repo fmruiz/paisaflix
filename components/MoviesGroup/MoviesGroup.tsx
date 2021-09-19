@@ -49,6 +49,7 @@ const Component = () => {
               .map((d: any, i: any) => (
                 <MovieContainer
                   key={i}
+                  id={d._id}
                   image={d.coverImage}
                   name={d.name}
                   genre={d.genre}
@@ -58,12 +59,13 @@ const Component = () => {
               ))}
         </MoviesSelectedRow>
         <MoviesSelectedRow>
-        {!isError &&
+          {!isError &&
             data.data
               .slice(2)
               .map((d: any, i: any) => (
                 <MovieContainer
                   key={i}
+                  id={d._id}
                   image={d.coverImage}
                   name={d.name}
                   genre={d.genre}
