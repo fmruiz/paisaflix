@@ -2,7 +2,7 @@
 import React from "react";
 import { useQuery, QueryClient, QueryClientProvider } from "react-query";
 import { numTrailers } from "../../utils/numTrailers";
-import { PlayIcon } from "../UI/Icons/playIcon";
+import { PlayIcon } from "../UI/Icons/PlayIcon";
 
 import {
   TrailerMovie,

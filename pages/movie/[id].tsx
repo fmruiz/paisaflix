@@ -2,8 +2,6 @@
 import React, { Fragment } from "react";
 import { NextPage } from "next";
 
-import { MovieContainer } from "./styles";
-
 import { Footer } from "@/components/Footer/Footer";
 import { BannerContainer, CoverContainer } from "@/components/Banner/styles";
 import { Navbar } from "@/components/Navbar/Navbar";
