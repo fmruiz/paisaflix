@@ -32,6 +32,19 @@ export const TrailerMovie = styled.div`
     width: 297px;
     height: 136px;
     top: 0;
+    cursor: pointer;
+  }
+  .trailer__filter__movie {
+    background: linear-gradient(180deg, rgba(23, 23, 23, 0) 0%, #171717 100%);
+    opacity: 0.8;
+    position: absolute;
+    width: 297px;
+    height: 136px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
   }
   .img__trailer {
     margin-right: 15px;

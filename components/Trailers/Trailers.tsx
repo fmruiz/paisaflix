@@ -2,6 +2,7 @@
 import React from "react";
 import { useQuery, QueryClient, QueryClientProvider } from "react-query";
 import { numTrailers } from "../../utils/numTrailers";
+import { PlayIcon } from "../UI/Icons/playIcon";
 
 import {
   TrailerMovie,
@@ -12,14 +13,16 @@ import {
 
 const queryClient = new QueryClient();
 
-const Component = () => {
+interface IProps {
+  trailerImage?: string;
+}
+
+const Component = (props: any) => {
   const { isError, isLoading, data } = useQuery("Hero", () =>
     fetch(
       "https://paisa-challange.herokuapp.com/api/v1/paisaflix/trailers"
     ).then((res) => res.json())
   );
-
-  console.log(data);
 
   if (isLoading)
     return (
@@ -39,25 +42,38 @@ const Component = () => {
     <TrailersContainer>
       <TrailersTitle>Trailers</TrailersTitle>
       <TrailerMovieContainer>
-        {!isError &&
-          data.data.slice(0, -1).map((t: any, i: any) => (
-            <TrailerMovie key={i}>
-              <img
-                className={"img__trailer"}
-                src={t.trailerImage}
-                alt={`trailer_${i}`}
-              />
-              <div className={"trailer__filter"}></div>
-              <p className={"img__index"}>{numTrailers(i + 1)}</p>
-            </TrailerMovie>
-          ))}
+        {!isError && props.trailerImage ? (
+          <TrailerMovie>
+            <img
+              className={"img__trailer"}
+              src={props.trailerImage}
+              alt={`trailer_`}
+            />
+            <div className={"trailer__filter__movie"}>
+              <PlayIcon />
+            </div>
+          </TrailerMovie>
+        ) : null}
+        {!isError && !props.trailerImage
+          ? data.data.slice(0, -1).map((t: any, i: any) => (
+              <TrailerMovie key={i}>
+                <img
+                  className={"img__trailer"}
+                  src={t.trailerImage}
+                  alt={`trailer_${i}`}
+                />
+                <div className={"trailer__filter"}></div>
+                <p className={"img__index"}>{numTrailers(i + 1)}</p>
+              </TrailerMovie>
+            ))
+          : null}
       </TrailerMovieContainer>
     </TrailersContainer>
   );
 };
 
-export const Trailers: React.FC = () => (
+export const Trailers: React.FC<IProps> = (props: IProps) => (
   <QueryClientProvider client={queryClient}>
-    <Component />
+    <Component {...props} />
   </QueryClientProvider>
 );
