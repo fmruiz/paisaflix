@@ -51,6 +51,7 @@ const Component = () => {
         genre={data.data.genre}
         duration={data.data.duration}
         rating={data.data.rating}
+        id={data.data._id}
       />
       <Trailers />
       <MoviesGroup />
