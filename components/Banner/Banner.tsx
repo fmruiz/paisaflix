@@ -7,6 +7,7 @@ import { BannerContainer, CoverContainer } from "./styles";
 import { Navbar } from "../Navbar/Navbar";
 import { MovieDescription } from "../MovieDescription/MovieDescription";
 import { Footer } from "../Footer/Footer";
+import { Trailers } from "../Trailers/Trailers";
 
 const queryClient = new QueryClient();
 
@@ -51,6 +52,7 @@ const Component = () => {
         rating={data.data.rating}
         views={data.data.views}
       />
+      <Trailers />
       <Footer />
     </BannerContainer>
   );
