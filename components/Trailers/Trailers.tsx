@@ -39,9 +39,9 @@ const Component = (props: any) => {
     );
 
   return (
-    <TrailersContainer>
-      <TrailersTitle>Trailers</TrailersTitle>
-      <TrailerMovieContainer>
+    <TrailersContainer data-cy="trailers-container">
+      <TrailersTitle data-cy="trailers-title">Trailers</TrailersTitle>
+      <TrailerMovieContainer data-cy="trailers-row">
         {!isError && props.trailerImage ? (
           <TrailerMovie>
             <img
@@ -56,7 +56,7 @@ const Component = (props: any) => {
         ) : null}
         {!isError && !props.trailerImage
           ? data.data.slice(0, -1).map((t: any, i: any) => (
-              <TrailerMovie key={i}>
+              <TrailerMovie key={i} data-cy={`trailer-${i + 1}`}>
                 <img
                   className={"img__trailer"}
                   src={t.trailerImage}
