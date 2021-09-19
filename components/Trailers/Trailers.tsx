@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { useQuery, QueryClient, QueryClientProvider } from "react-query";
+import { numTrailers } from "../../utils/numTrailers";
 
 import {
   TrailerMovie,
@@ -36,12 +37,17 @@ const Component = () => {
     <TrailersContainer>
       <TrailersTitle>Trailers</TrailersTitle>
       <TrailerMovieContainer>
-        {!isError && data.data.map((t: any, i: any) => (
-          <TrailerMovie key={i}>
-            <img className={"img__trailer"} src={t.trailerImage} alt={`trailer_${i}`} />
-            <p className={"img__index"}>{i + 1}</p>
-          </TrailerMovie>
-        ))}
+        {!isError &&
+          data.data.slice(0, -1).map((t: any, i: any) => (
+            <TrailerMovie key={i}>
+              <img
+                className={"img__trailer"}
+                src={t.trailerImage}
+                alt={`trailer_${i}`}
+              />
+              <p className={"img__index"}>{numTrailers(i + 1)}</p>
+            </TrailerMovie>
+          ))}
       </TrailerMovieContainer>
     </TrailersContainer>
   );
