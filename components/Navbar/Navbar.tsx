@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import {
   Column,
@@ -14,10 +15,10 @@ import { Logo } from "../UI/Logo";
 import { SearchIcon } from "../UI/Icons/SearchIcon";
 
 const LINKS_NAV = [
-  { name: "Home", data: "navbar-home" },
-  { name: "Contact Us", data: "navbar-contact" },
-  { name: "FAQ", data: "navbar-faq" },
-  { name: "Pricing", data: "navbar-pricing" },
+  { name: "Home", data: "navbar-home", path: "/" },
+  { name: "Contact Us", data: "navbar-contact", path: "#" },
+  { name: "FAQ", data: "navbar-faq", path: "#" },
+  { name: "Pricing", data: "navbar-pricing", path: "#" },
 ];
 
 export const Navbar: React.FC = () => {
@@ -27,7 +28,9 @@ export const Navbar: React.FC = () => {
         <Logo />
         <LinksContainer data-cy="navbar-container-links">
           {LINKS_NAV.map((link, i) => (
-            <LinksName key={i} data-cy={link.data}>{link.name}</LinksName>
+            <Link href={link.path} passHref key={i}>
+              <LinksName data-cy={link.data}>{link.name}</LinksName>
+            </Link>
           ))}
         </LinksContainer>
       </Column>

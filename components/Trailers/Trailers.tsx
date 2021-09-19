@@ -11,6 +11,7 @@ import {
   TrailersTitle,
 } from "./styles";
 
+// react-query client
 const queryClient = new QueryClient();
 
 interface IProps {

@@ -1,10 +1,4 @@
 import React from "react";
-import { ContactDetails } from "../UI/ContactDetails";
-import { ArrowIcon } from "../UI/Icons/ArrowIcon";
-import { LocationIcon } from "../UI/Icons/LocationIcon";
-import { MessageIcon } from "../UI/Icons/MessageIcon";
-import { PhoneIcon } from "../UI/Icons/PhoneIcon";
-import { Logo } from "../UI/Logo";
 
 import {
   Column,
@@ -20,6 +14,13 @@ import {
   NewsLettersContainer,
   NewsLettersText,
 } from "./styles";
+
+import { ContactDetails } from "../UI/ContactDetails";
+import { ArrowIcon } from "../UI/Icons/ArrowIcon";
+import { LocationIcon } from "../UI/Icons/LocationIcon";
+import { MessageIcon } from "../UI/Icons/MessageIcon";
+import { PhoneIcon } from "../UI/Icons/PhoneIcon";
+import { Logo } from "../UI/Logo";
 
 const CONTACT_DETAILS = [
   { Component: LocationIcon, text: "8819 Enrique Martinez, Bs As., 90280" },

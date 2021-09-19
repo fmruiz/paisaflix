@@ -17,7 +17,7 @@ import {
 import { TimerIcon } from "@/components/UI/Icons/TimerIcon";
 import { ViewIcon } from "@/components/UI/Icons/ViewIcon";
 
-interface Props {
+interface IProps {
   image: string;
   name: string;
   genre: string;
@@ -26,7 +26,7 @@ interface Props {
   id: string;
 }
 
-export const MovieContainer = (props: Props) => {
+export const MovieContainer: React.FC<IProps> = (props: IProps) => {
   return (
     <Link href={`/movie/[id]`} as={`/movie/${props.id}`} passHref>
       <Container>

@@ -10,6 +10,7 @@ import { Footer } from "../Footer/Footer";
 import { Trailers } from "../Trailers/Trailers";
 import { MoviesGroup } from "../MoviesGroup/MoviesGroup";
 
+// react-query client
 const queryClient = new QueryClient();
 
 const Component = () => {
